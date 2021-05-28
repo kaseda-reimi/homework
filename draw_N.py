@@ -9,6 +9,6 @@ plt.plot(x, x*(1-x))
 plt.xlabel('x')
 plt.ylabel('y')
 plt.legend(["r=4", "r=1"])
-plt.savefig("Npraph.png")
+plt.savefig("Ngraph.png")
 
 print(x)
