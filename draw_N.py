@@ -10,3 +10,5 @@ plt.xlabel('x')
 plt.ylabel('y')
 plt.legend(["r=4", "r=1"])
 plt.show()
+
+print(x)
