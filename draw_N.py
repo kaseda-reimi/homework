@@ -1,6 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
-%matplotlib inline
+matplotlib.use('TkAgg')
 
 x = np.linspace(0, 1, 100)
 plt.figure(0)
