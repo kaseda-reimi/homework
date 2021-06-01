@@ -13,8 +13,8 @@ Ne = (-tsp*G*R-1/tph+G*(b-1)*N0)/(2*G*(b-1))
 
 
 plt.figure(0)
-plt.plot(R, Ne[0]))
-plt.plot(R, Ne[1]))
+plt.plot(R, Ne[0])
+plt.plot(R, Ne[1])
 plt.xlabel('log10(R)')
 plt.ylabel('Ne')
 plt.legend(["β=1e-5", "β=1e-2"])
