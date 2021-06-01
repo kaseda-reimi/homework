@@ -9,7 +9,7 @@ b = np.array([[1e-5], [1e-2], [1e-1], [0.5]])
 
 logR = np.linspace(25, 29, 100)
 R = 10**logR
-Ne = (G*tsp*R+1/tph+(1-b)*N0 + np.sqrt((1/tph+(1-b)*G*N0-G*tsp*R)**2+4*b*G*tsp/tph*R))/(2*(1-b)*G)
+Ne = (G*tsp*R+1/tph+(1-b)*N0*G - np.sqrt((1/tph+(1-b)*G*N0-G*tsp*R)**2+4*b*G*tsp/tph*R))/(2*(1-b)*G)
 logNe = np.log10(Ne)
 
 Np = tph*R - (1-b)*tph/tsp*Ne
