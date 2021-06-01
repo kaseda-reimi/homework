@@ -9,11 +9,11 @@ b = np.array([[1e-5], [1e-2], [1e-1], [0.5]])
 
 logR = np.linspace(25, 29, 100)
 R = 10**logR
-Z = -tsp*G*R-1/tph+G*(b-1)*N0
-Ne =(Z-np.sqrt(Z**2+4*tsp/tph*G*R*b))/(2*G*(b-1))
+Ne = (G*tsp*R+1/tph+(1-b)*N0 + np.sqrt((1/tph+(1-b)*G*N0-G*tsp*R)**2+4*b*G*tsp/tph*R))/(2*(1-b)*G)
 logNe = np.log10(Ne)
 
-Np = tph*R+tph/tsp*(b-1)*Ne
+Np = tph*R - (1-b)*tph/tsp*Ne
+logNp = np.log10(Np)
 
 plt.figure(0)
 plt.plot(logR, logNe[0])
