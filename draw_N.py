@@ -1,7 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-x = np.linspace(0, 1, 100)
+x = np.linspace(10, 1, 100)
 plt.figure(0)
 plt.title('logistic map')
 plt.plot(x, 4*x*(1-x))
