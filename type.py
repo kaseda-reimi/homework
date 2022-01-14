@@ -24,6 +24,7 @@ if __name__ == '__main__':
     #first time
     n = int(input("Enter attacker type(0~17): "))
     judge = int(input("Enter the judge(1~4): "))
+    #batsugun:1, imahitotu:2, mukou:3, toubai:4
     answer = [[18,18]]
     if judge == 1:
         for i in range(table.shape[1]):
