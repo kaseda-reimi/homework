@@ -1,5 +1,5 @@
 import numpy as np
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
 
 tsp = 3e-9
 G = 1e-6
@@ -15,6 +15,8 @@ logNe = np.log10(Ne)
 Np = tph*R - (1-b)*tph/tsp*Ne
 logNp = np.log10(Np)
 
+print(Ne[0])
+"""
 plt.figure(0)
 plt.plot(logR, logNe[0])
 plt.plot(logR, logNe[1])
@@ -34,3 +36,4 @@ plt.xlabel('log R)')
 plt.ylabel('log Np')
 plt.legend(["β=1e-5", "β=1e-2", "β=1e-1", "β=0.5"])
 plt.savefig("Np.png")
+"""
