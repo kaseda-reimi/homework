@@ -12,7 +12,7 @@ try:
     y = np.sin(x)*np.exp(-x/10)
     plt.plot(x, y)
     plt.title('Sample Output')
-    plt.show()
+    plt.savefig("sample.png")
     print('Accepted')
 
 except:
