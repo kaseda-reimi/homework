@@ -93,15 +93,25 @@ class GeneticAlgorithm:
 
     # parent selection
     def TournamentSelection(self):
-
+        competitor = np.random.choice(range(N),self.TS,replace=False)
+        i = competitor[0]
+        for x in competitor:
+            if self.Fs[x] < self.Fs[i]:
+                i = x
         return self.Xs[i]
 
     # crossover
     def crossover(self, parent1, parent2):
         # execute crossover with probability PC
         if np.random.rand() < self.PC:
+            boundary = np.random.randint(1,self.PROB_DIMEINTION-1)
+            offspring1 = [parent1[i] for i in range(boundary)]
+            offspring2 = [parent2[i] for i in range(boundary)]
+            _parent2 = [x for x in parent2 if x not in offspring1]
+            _parent1 = [x for x in parent1 if x not in offspring2]
+            offspring1 += _parent2
+            offspring2 += _parent1
 
-            
             return offspring1, offspring2
 
         # return copies of parents if crossover does not act
@@ -113,8 +123,8 @@ class GeneticAlgorithm:
     def mutation(self, offspring):
         # execute mutation with probability PM
         if np.random.rand() < self.PM:
-
-
+            allele1, allele2 = np.random.choice(range(self.PROB_DIMEINTION),2,replace=False)
+            offspring[allele1], offspring[allele2] = offspring[allele2], offspring[allele1]
             return offspring
         else:
             return offspring
